@@ -11,7 +11,7 @@ import Editor from '@react-page/editor';
 import slate from '@react-page/plugins-slate';
 // image
 import image from '@react-page/plugins-image';
-import { basicCustomContentPlugin } from './components/image/imagePlugin';
+import myPlugin from './components/image/imagePlugin';
 // import PageLayout from '../../components/PageLayout';
 
 // Stylesheets for the rich text area plugin
@@ -22,11 +22,10 @@ import { basicCustomContentPlugin } from './components/image/imagePlugin';
 //import '@react-page/plugins-image/lib/index.css';
 
 // Define which plugins we want to use.
-const cellPlugins = [slate(), image, basicCustomContentPlugin];
+const cellPlugins = [slate(), image, myPlugin];
 
 export default function SimpleExample() {
   const [value, setValue] = useState(null);
-
   return (
     <div>
       <Editor cellPlugins={cellPlugins} value={value} onChange={setValue} />
