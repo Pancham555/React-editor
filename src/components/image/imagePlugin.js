@@ -1,4 +1,4 @@
-import { CellPlugin } from '@react-page/editor';
+// import { CellPlugin } from '@react-page/editor';
 import React from 'react';
 
 // use a type here, not an interface
@@ -6,24 +6,26 @@ import React from 'react';
 
 const myFirstcellPlugin = {
     Renderer: ({ data }) => (
-        <div style={{ background: "lightblue", padding: "36px", color: "white", textAlign: "center" }}>
-            <h1> {data.title}</h1>
-        </div >
+        <div style={{ marginTop: "4rem", display: "flex", justifyContent: "center" }}>
+            <div style={{ margin: "0px 3rem", borderRadius: "2rem", backgroundColor: "wheat", width: "100%", display: "flex", justifyContent: "center" }}>
+                <img src={data.url} alt="" style={{ width: "auto", height: "30rem", padding: "3rem 0px" }} />
+            </div>
+        </div>
     ),
-    id: 'myFirstCellPlugin',
-    title: 'My first cell plugin',
-    description: 'My first cell plugin just displays a title',
+    id: 'ImageCellPlugin',
+    title: 'Image cell plugin',
+    description: 'A cell plugin just displays an image',
     version: 1,
     controls: {
         type: 'autoform',
         schema: {
             properties: {
-                title: {
+                url: {
                     type: 'string',
                     default: '',
                 },
             },
-            required: ['title'],
+            required: ['url'],
         },
     },
 };
