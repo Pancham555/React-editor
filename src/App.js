@@ -15,6 +15,8 @@ import myPlugin from './components/image/imagePlugin';
 import ParentComponent from '././components/parentComponent/parentComponent';
 import ChildComponent from './components/childComponent/childComponent';
 import FooterPlugin from './components/footer/footerPlugin';
+import ButtonPlugin from './components/buttons/buttonPlugin';
+import CardPlugin from './components/cardbox/card';
 // import PageLayout from '../../components/PageLayout';
 
 // Stylesheets for the rich text area plugin
@@ -25,7 +27,7 @@ import FooterPlugin from './components/footer/footerPlugin';
 //import '@react-page/plugins-image/lib/index.css';
 
 // Define which plugins we want to use.
-const cellPlugins = [slate(), image, myPlugin, ParentComponent, ChildComponent, FooterPlugin];
+const cellPlugins = [slate(), image, myPlugin, ParentComponent, ChildComponent, FooterPlugin, ButtonPlugin, CardPlugin];
 
 export default function SimpleExample() {
   const [value, setValue] = useState(null);
@@ -42,6 +44,9 @@ export default function SimpleExample() {
         </div>
       </div> */}
       <Editor readOnly={false} cellPlugins={cellPlugins} value={value} onChange={setValue} />
+
+      {/* https://redux-toolkit.js.org/ */}
+      {/* https://redux-toolkit.js.org/img/redux.svg */}
     </>
   );
 }

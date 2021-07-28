@@ -1,31 +1,64 @@
 // import { CellPlugin } from '@react-page/editor';
 import React from 'react';
-
+import * as Inputs from '@react-page/editor'
 // use a type here, not an interface
 
 
 const myFirstcellPlugin = {
-    Renderer: ({ data }) => (
-        <div style={{ marginTop: "4rem", display: "flex", justifyContent: "center" }}>
-            <div style={{ margin: "0px 3rem", borderRadius: "2rem", backgroundColor: "wheat", width: "100%", display: "flex", justifyContent: "center" }}>
-                <img src={data.url} alt="" style={{ width: "auto", height: "30rem", padding: "3rem 0px" }} />
-            </div>
+    Renderer: (props) => (
+        <div style={{
+            display: "flex", justifyContent: "center", fontWeight: "bold", flexDirection: "column",
+            fontSize: `${props.data.fontSize}rem`, color: `${props.data.color}`, textAlign: "center",
+            backgroundColor: `${props.data.bgcolor}`, width: "auto", height: `${props.data.height}rem`
+        }}>
+            <div style={{ width: "auto", margin: "20px auto 20px auto" }}> {props.data.text}</div>
+            <div style={{ width: "auto", margin: "10px auto 10px auto", fontSize: "1.6rem" }}> {props.data.secText}</div>
+            <div style={{ margin: "20px auto 20px auto" }}>{props.children}</div>
         </div>
     ),
-    id: 'ImageCellPlugin',
-    title: 'Image cell plugin',
-    description: 'A cell plugin just displays an image',
+    id: 'TopCellPlugin',
+    title: 'Top cell plugin',
+    description: 'A cell plugin just displays the top of page',
     version: 1,
     controls: {
         type: 'autoform',
         schema: {
             properties: {
-                url: {
-                    type: 'string',
-                    default: '',
+                text: {
+                    type: "string",
+                    default: "SAMPLE TEXT",
                 },
+                secText: {
+                    type: "string",
+                    default: "SAMPLE TEXT",
+                }
+                ,
+                color: {
+                    type: "string",
+                    default: "white",
+                    uniforms: {
+                        component: Inputs.ColorPickerField
+                    },
+                }
+                ,
+                bgcolor: {
+                    type: "string",
+                    default: "white",
+                    uniforms: {
+                        component: Inputs.ColorPickerField
+                    },
+
+                },
+                height: {
+                    type: "number",
+                    default: 26,
+                },
+                fontSize: {
+                    type: "number",
+                    default: 3,
+                }
             },
-            required: ['url'],
+            required: ['text', 'secText'],
         },
     },
 };

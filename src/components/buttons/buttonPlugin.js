@@ -2,15 +2,16 @@ import * as Inputs from '@react-page/editor'
 // use a type here, not an interface
 
 
-const ChildPlugin = {
+const ButtonPlugin = {
     Renderer: (props) => (
         <div style={{
-            borderBottom: `4px solid ${props.data.bordercolor}`, fontWeight: "bold", fontSize: `${props.data.fontSize}rem`,
+            borderRadius: `${props.data.radius}rem`, padding: "15px 30px", display: "inline",
+            border: `2px solid ${props.data.bordercolor}`, fontWeight: "bold", fontSize: `${props.data.fontSize}rem`,
         }}>{props.data.text}</div>
     ),
-    id: 'ChildCellPlugin',
-    title: 'Child cell plugin',
-    description: 'A cell plugin just displays a child component',
+    id: 'ButtonCellPlugin',
+    title: 'Button cell plugin',
+    description: 'A cell plugin just displays a button component',
     version: 1,
     controls:
     {
@@ -39,7 +40,12 @@ const ChildPlugin = {
                 },
                 text: {
                     type: "string",
-                    default: "CHILD CELL",
+                    default: "SAMPLE TEXT",
+
+                },
+                radius: {
+                    type: "number",
+                    default: 0,
 
                 }
             },
@@ -48,4 +54,4 @@ const ChildPlugin = {
     }
     ,
 };
-export default ChildPlugin
+export default ButtonPlugin

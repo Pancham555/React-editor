@@ -2,23 +2,16 @@ import * as Inputs from '@react-page/editor'
 // use a type here, not an interface
 
 
-const ParentPlugin = {
+const CardPlugin = {
     Renderer: (props) => (
-        <div style={{
-            display: "flex", justifyContent: "space-between", boxShadow: "10px 0px black",
-            color: `${props.data.color}`, fontWeight: "bold", fontSize: `${props.data.fontSize}rem`,
-            width: "100%", height: `${props.data.height}rem`, background: `${props.data.bgcolor}`, textAlign: "center"
-        }}>
-            <div style={{ margin: "auto 50px", width: "auto" }}>{props.data.text}</div>
-
-            <div style={{ margin: "auto 50px", width: "auto", display: "flex", justifyContent: "space-evenly" }}>
-                {props.children}
-            </div>
+        <div style={{ borderRadius: "0.6rem", display: "inline-block", boxShadow: "0px 10px 20px black", margin: "20px" }}>
+            <div style={{ fontWeight: "bold", fontSize: `${props.data.headingSize}rem`, textAlign: "center", margin: "5px" }}>{props.data.heading}</div>
+            <div style={{ margin: "10px" }}>{props.data.text}</div>
         </div>
     ),
-    id: 'ParentCellPlugin',
-    title: 'Parent cell plugin',
-    description: 'A cell plugin just displays a parent component',
+    id: 'CardCellPlugin',
+    title: 'Card cell plugin',
+    description: 'A cell plugin just displays a card',
     version: 1,
     controls:
     {
@@ -49,16 +42,25 @@ const ParentPlugin = {
                     default: 2,
 
                 },
+                headingSize: {
+                    type: "number",
+                    default: 2.6,
+
+                },
                 text: {
                     type: "string",
                     default: "SAMPLE TEXT",
 
                 },
+                heading: {
+                    type: "string",
+                    default: "SAMPLE TEXT",
+
+                }
             },
-            required: ['text'],
+            required: ['text', 'heading'],
         },
     }
     ,
 };
-export default ParentPlugin
-
+export default CardPlugin

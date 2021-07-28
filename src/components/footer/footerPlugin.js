@@ -5,10 +5,17 @@ import * as Inputs from '@react-page/editor'
 const FooterPlugin = {
     Renderer: (props) => (
         <div style={{
-            color: `${props.data.color}`,
-            fontSize: `${props.data.fontSize}rem`, padding: "20px 50px",
-            background: `${props.data.bgcolor}`, textAlign: "center", display: "block"
-        }}>{props.data.text}</div>
+            display: "flex", justifyContent: "center", alignContent: "center", alignItems: "center", flexDirection: "column",
+            padding: "16px", background: `${props.data.bgcolor}`,
+        }}>
+            <div style={{ width: "auto" }}>
+                <img src={props.data.url} alt="" style={{ margin: "auto", width: "64px", height: "auto" }} />
+            </div>
+            <div style={{
+                color: `${props.data.color}`,
+                fontSize: `${props.data.fontSize}rem`, textAlign: "center"
+            }}>{props.data.text}</div>
+        </div>
     ),
     id: 'FooterCellPlugin',
     title: 'Footer cell plugin',
@@ -40,6 +47,11 @@ const FooterPlugin = {
 
                 },
                 text: {
+                    type: "string",
+                    default: "",
+
+                },
+                url: {
                     type: "string",
                     default: "",
 
