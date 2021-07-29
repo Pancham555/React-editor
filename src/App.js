@@ -9,8 +9,11 @@ import FooterPlugin from "./components/footer/footerPlugin";
 import CardPlugin from "./components/CardComponent/CardPlugin";
 import ButtonPlugin from './components/buttons/buttonPlugin'
 import CardPlugin_2 from './components/cardbox/card'
+import headingPlugin from './components/Heading/headingPlugin'
+import navPlugin from './components/Nav/navPlugin'
+import texBlockPlugin from './components/texBlockPlugin/textBlockPlugin'
 
-const cellPlugins = [slate(), image, myPlugin, ParentComponent, ChildComponent, FooterPlugin, ButtonPlugin, CardPlugin, CardPlugin_2];
+const cellPlugins = [slate(), image, myPlugin, ParentComponent, ChildComponent, FooterPlugin, ButtonPlugin, CardPlugin, CardPlugin_2,headingPlugin,navPlugin,texBlockPlugin];
 
 
 export default function SimpleExample() {
