@@ -4,7 +4,7 @@ import * as Inputs from '@react-page/editor'
 
 const CardPlugin = {
     Renderer: (props) => (
-        <div style={{ borderRadius: "0.6rem", display: "inline-block", boxShadow: "0px 10px 20px black", margin: "20px" }}>
+        <div style={{ display: "inline-block", margin: "20px" }}>
             <div style={{ fontWeight: "bold", fontSize: `${props.data.headingSize}rem`, textAlign: "center", margin: "5px" }}>{props.data.heading}</div>
             <div style={{ margin: "10px" }}>{props.data.text}</div>
         </div>

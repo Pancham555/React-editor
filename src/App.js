@@ -28,6 +28,7 @@ export default function SimpleExample() {
           <button onClick={handleChange}>Toggle</button>
         </div>
       </div> */}
+      {/* <button onClick={() => console.log(value)}></button> */}
       <Editor readOnly={false} cellPlugins={cellPlugins} value={value} onChange={setValue} />
 
       {/* https://redux-toolkit.js.org/ */}

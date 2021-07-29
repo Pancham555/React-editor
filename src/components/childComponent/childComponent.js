@@ -5,7 +5,7 @@ import * as Inputs from '@react-page/editor'
 const ChildPlugin = {
     Renderer: (props) => (
         <div style={{
-            borderBottom: `4px solid ${props.data.bordercolor}`, fontWeight: "bold", fontSize: `${props.data.fontSize}rem`,
+            borderBottom: `2px solid ${props.data.bordercolor}`, fontWeight: "bold", fontSize: `${props.data.fontSize}rem`,
         }}>{props.data.text}</div>
     ),
     id: 'ChildCellPlugin',
