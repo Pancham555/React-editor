@@ -2,52 +2,31 @@
 
 const navPlugin = {
   Renderer: ({ data }) => (
-    <nav style={{ position: "relative", boxShadow: "0px 0.5px 5px black" }}>
-      <div
-        style={{
-          position: "relative",
-          height: "80px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "stretch",
-          padding: "0 2rem",
-          background: "#fff",
-        }}
-      >
-        <div
-          style={{
-            position: "relative",
-            heightfontSize: "2rem",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            fontWeight: "bold",
-          }}
-        >
-          {data.title}
-        </div>
-        <ul
-          style={{
-            display: "flex", justifyContent: "center",
-            alignItems: "center", listStyle: "none", padding: "0", margin: "0 20px 0 0"
-          }}
-          class="navList"
-        >
-          <li >
-            <a style={{ textDecoration: "none", marginRight: "15px", color: "black", cursor: "pointer" }} >Home</a>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Carousel</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
-          <li>
-            <a style={{ textDecoration: "none", marginRight: "15px", color: "black", cursor: "pointer" }} >Store</a>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
           </li>
-          <li>
-            <a style={{ textDecoration: "none", marginRight: "15px", color: "black", cursor: "pointer" }} >Community</a>
-          </li>
-          <li>
-            <a style={{ textDecoration: "none", marginRight: "15px", color: "black", cursor: "pointer" }} >Contact</a>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
           </li>
         </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
       </div>
-    </nav>
+    </div>
+  </nav>
   ),
   id: "navPlugin",
   title: "Nav",

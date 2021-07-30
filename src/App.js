@@ -14,31 +14,32 @@ import navPlugin from './components/Nav/navPlugin';
 import texBlockPlugin from './components/texBlockPlugin/textBlockPlugin';
 import SideImagePlugin from "./components/sideImage/sideImagePlugin";
 import SecondHeadingPlugin from "./components/Heading/headingSecond";
+import CarouselPlugin from "./components/Carousel/carouselPlugin";
 
-const cellPlugins = [slate(), image, myPlugin, ParentComponent, ChildComponent, FooterPlugin, ButtonPlugin, CardPlugin, CardPlugin_2, headingPlugin, navPlugin, texBlockPlugin, SideImagePlugin, SecondHeadingPlugin];
+const cellPlugins = [slate(), image, FooterPlugin, headingPlugin, navPlugin, texBlockPlugin, CarouselPlugin];
 
 
 export default function SimpleExample() {
   const [value, setValue] = useState(null);
-  // console.log(value)
-  // const [read, setRead] = useState(false);
-  // const handleChange = () => {
-  //   setRead(!read);
-  // }
+  console.log(value)
+  const [read, setRead] = useState(false);
+  const handleChange = () => {
+    setRead(!read);
+  }
   return (
-    <>
+    <div>
 
-      {/* <div style={{ display: "flex", justifyContent: "center", position: "fixed", top: 0, left: 0, right: 0, zIndex: 100 }}>
+      <div style={{ display: "flex", justifyContent: "center", position: "fixed", top: 0, left: 0, right: 0, zIndex: 100 }}>
         <div >
           <button onClick={handleChange}>Toggle</button>
         </div>
-      </div> */}
+      </div>
       {/* <button onClick={() => console.log(value)}></button> */}
-      <Editor readOnly={false} cellPlugins={cellPlugins} value={value} onChange={setValue} />
+      <Editor readOnly={read} cellPlugins={cellPlugins} value={value} onChange={setValue} />
 
       {/* https://redux-toolkit.js.org/ */}
       {/* https://redux-toolkit.js.org/img/redux.svg */}
 
-    </>
+    </div>
   );
 }
