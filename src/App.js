@@ -7,13 +7,15 @@ import ParentComponent from "././components/parentComponent/parentComponent";
 import ChildComponent from "./components/childComponent/childComponent";
 import FooterPlugin from "./components/footer/footerPlugin";
 import CardPlugin from "./components/CardComponent/CardPlugin";
-import ButtonPlugin from './components/buttons/buttonPlugin'
-import CardPlugin_2 from './components/cardbox/card'
-import headingPlugin from './components/Heading/headingPlugin'
-import navPlugin from './components/Nav/navPlugin'
-import texBlockPlugin from './components/texBlockPlugin/textBlockPlugin'
+import ButtonPlugin from './components/buttons/buttonPlugin';
+import CardPlugin_2 from './components/cardbox/card';
+import headingPlugin from './components/Heading/headingPlugin';
+import navPlugin from './components/Nav/navPlugin';
+import texBlockPlugin from './components/texBlockPlugin/textBlockPlugin';
+import SideImagePlugin from "./components/sideImage/sideImagePlugin";
+import SecondHeadingPlugin from "./components/Heading/headingSecond";
 
-const cellPlugins = [slate(), image, myPlugin, ParentComponent, ChildComponent, FooterPlugin, ButtonPlugin, CardPlugin, CardPlugin_2,headingPlugin,navPlugin,texBlockPlugin];
+const cellPlugins = [slate(), image, myPlugin, ParentComponent, ChildComponent, FooterPlugin, ButtonPlugin, CardPlugin, CardPlugin_2, headingPlugin, navPlugin, texBlockPlugin, SideImagePlugin, SecondHeadingPlugin];
 
 
 export default function SimpleExample() {

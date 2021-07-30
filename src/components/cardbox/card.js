@@ -10,7 +10,7 @@ const CardPlugin = {
         </div>
     ),
     id: 'CardCellPlugin',
-    title: 'Card cell plugin',
+    title: 'Card_cell_plugin',
     description: 'A cell plugin just displays a card',
     version: 1,
     controls:

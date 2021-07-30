@@ -2,7 +2,7 @@
 
 const navPlugin = {
   Renderer: ({ data }) => (
-    <nav style={{ position: "relative" }}>
+    <nav style={{ position: "relative", boxShadow: "0px 0.5px 5px black" }}>
       <div
         style={{
           position: "relative",
@@ -27,21 +27,23 @@ const navPlugin = {
           {data.title}
         </div>
         <ul
-          style={{ display: "flex",justifyContent: "center",
-          alignItems: "center", listStyle: "none", padding: "0", margin: "0 20px 0 0" }}
+          style={{
+            display: "flex", justifyContent: "center",
+            alignItems: "center", listStyle: "none", padding: "0", margin: "0 20px 0 0"
+          }}
           class="navList"
         >
           <li >
-            <a style={{textDecoration: "none", marginRight:"15px",color:"black"}}href="#">Home</a>
+            <a style={{ textDecoration: "none", marginRight: "15px", color: "black", cursor: "pointer" }} >Home</a>
           </li>
           <li>
-            <a style={{textDecoration: "none", marginRight:"15px",color:"black"}} href="#">Store</a>
+            <a style={{ textDecoration: "none", marginRight: "15px", color: "black", cursor: "pointer" }} >Store</a>
           </li>
           <li>
-            <a style={{textDecoration: "none", marginRight:"15px",color:"black"}} href="#">Community</a>
+            <a style={{ textDecoration: "none", marginRight: "15px", color: "black", cursor: "pointer" }} >Community</a>
           </li>
           <li>
-            <a style={{textDecoration: "none", marginRight:"15px",color:"black"}} href="#">Contact</a>
+            <a style={{ textDecoration: "none", marginRight: "15px", color: "black", cursor: "pointer" }} >Contact</a>
           </li>
         </ul>
       </div>
