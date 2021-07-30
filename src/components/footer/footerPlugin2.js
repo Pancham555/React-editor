@@ -1,10 +1,12 @@
-const myFirstCellPlugin = {
+import FooterComponent from "./FooterComponent";
+
+const footerPlugin2 = {
     Renderer: ({ data }) => (
-      <p>{data.title}</p>
+      <FooterComponent></FooterComponent>
     ),
-    id: 'myFirstCellPlugin',
-    title: 'My first cell plugin',
-    description: 'My first cell plugin just displays a title',
+    id: 'footerPlugin2',
+    title: 'footerPlugin2',
+    description: 'footerPlugin2',
     version: 1,
     controls: {
       type: 'autoform',
@@ -19,4 +21,4 @@ const myFirstCellPlugin = {
       },
     },
   };
-  export default  myFirstCellPlugin;
+  export default  footerPlugin2;
