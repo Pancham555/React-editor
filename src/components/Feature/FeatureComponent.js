@@ -1,21 +1,22 @@
 import React from "react";
 
-const FeatureComponent = () => {
+const FeatureComponent = (props) => {
+  const { title, text } = props?.data;
   return (
-    <div>
+    <div className='m-5'>
       <div class="row featurette">
         <div class="col-md-7 order-md-2">
           <h2 class="featurette-heading">
-            Oh yeah, it’s that good.{" "}
-            <span class="text-muted">See for yourself.</span>
+            {title}
           </h2>
           <p class="lead">
-            Another featurette? Of course. More placeholder content here to give
+            {/* Another featurette? Of course. More placeholder content here to give
             you an idea of how this layout would work with some actual
-            real-world content in place.
+            real-world content in place. */}
+            {text}
           </p>
         </div>
-        <div class="col-md-5 order-md-1">
+        <div class="col-md-4 order-md-1">
           <svg
             class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
             width="500"
