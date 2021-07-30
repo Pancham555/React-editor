@@ -1,12 +1,12 @@
-import CarouselComponent from "./CarouselComponent";
+import FeatureComponent from "./FeatureComponent";
 
-const CarouselPlugin = {
+const featurePlugin = {
     Renderer: ({ data }) => (
-      <CarouselComponent></CarouselComponent>
+      <FeatureComponent></FeatureComponent>
     ),
-    id: 'CarouselPlugin',
-    title: 'Carousel',
-    description: 'Imagine your carousel',
+    id: 'featurePlugin',
+    title: 'featurePlugin',
+    description: 'featurePlugin',
     version: 1,
     controls: {
       type: 'autoform',
@@ -21,4 +21,4 @@ const CarouselPlugin = {
       },
     },
   };
-  export default  CarouselPlugin;
+  export default  featurePlugin;
