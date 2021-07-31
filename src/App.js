@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Editor from "@react-page/editor";
 import slate from "@react-page/plugins-slate";
 import image from "@react-page/plugins-image";
@@ -12,8 +12,9 @@ import featurePlugin from "./components/Feature/featurPlugin";
 import heroPlugin from "./components/Hero/heroPlugin";
 import heroPlugin2 from "./components/Hero/heroPlugin2";
 import cardPlugin from "./components/cardPlugin/cardPlugin1";
-
-const cellPlugins = [slate(), image, FooterPlugin, FooterPlugin2, headingPlugin, navPlugin, texBlockPlugin, cardPlugin, CarouselPlugin, featurePlugin, heroPlugin, heroPlugin2];
+import ApiPlugin from "./components/api/apiPlugin";
+import axios from "axios";
+const cellPlugins = [slate(), image, FooterPlugin, FooterPlugin2, headingPlugin, navPlugin, texBlockPlugin, cardPlugin, CarouselPlugin, featurePlugin, heroPlugin, heroPlugin2, ApiPlugin];
 
 
 export default function SimpleExample() {
@@ -23,9 +24,19 @@ export default function SimpleExample() {
   const handleChange = () => {
     setRead(!read);
   }
-  return (
-    <div>
 
+  //Sending part
+
+  // useEffect(() => {
+  //   axios.post("", value).then((res) => {
+  //     console.log(res)
+  //   }).catch((err) => {
+  //     console.log(err)
+  //   })
+  // }, [])
+  return (
+
+    <div>
       <div style={{ display: "flex", justifyContent: "center", position: "fixed", top: 0, left: 0, right: 0, zIndex: 100 }}>
         <div >
           <button onClick={handleChange}>Toggle</button>
@@ -33,7 +44,6 @@ export default function SimpleExample() {
       </div>
       {/* <button onClick={() => console.log(value)}></button> */}
       <Editor readOnly={read} cellPlugins={cellPlugins} value={value} onChange={setValue} />
-
     </div>
   );
 }
