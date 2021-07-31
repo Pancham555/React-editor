@@ -13,8 +13,11 @@ import heroPlugin from "./components/Hero/heroPlugin";
 import heroPlugin2 from "./components/Hero/heroPlugin2";
 import cardPlugin from "./components/cardPlugin/cardPlugin1";
 import ApiPlugin from "./components/api/apiPlugin";
+import jumbotronPlugin from "./components/Jumbotron/jumbotronPlugin";
 import axios from "axios";
-const cellPlugins = [slate(), image, FooterPlugin, FooterPlugin2, headingPlugin, navPlugin, texBlockPlugin, cardPlugin, CarouselPlugin, featurePlugin, heroPlugin, heroPlugin2, ApiPlugin];
+
+const cellPlugins = [slate(), navPlugin, heroPlugin, heroPlugin2, jumbotronPlugin, FooterPlugin, FooterPlugin2, headingPlugin, image, texBlockPlugin, cardPlugin, CarouselPlugin, featurePlugin, ApiPlugin];
+
 
 
 export default function SimpleExample() {
