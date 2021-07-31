@@ -6,14 +6,8 @@ import * as Inputs from '@react-page/editor'
 
 const myFirstcellPlugin = {
   Renderer: (props) => (
-    <div style={{
-      display: "flex", justifyContent: "center", fontWeight: "bold", flexDirection: "column",
-      fontSize: `${props.data.fontSize}rem`, color: `${props.data.color}`, textAlign: "center",
-      backgroundColor: `${props.data.bgcolor}`, width: "auto", height: `${props.data.height}rem`
-    }}>
-      <div style={{ width: "auto", margin: "20px auto 20px auto" }}> {props.data.text}</div>
-      <div style={{ width: "auto", margin: "10px auto 10px auto", fontSize: "1.6rem" }}> {props.data.secText}</div>
-      <div style={{ margin: "20px auto 20px auto" }}>{props.children}</div>
+    <div className='d-flex justify-content-center m-auto'>
+      <img src={props.data.url} alt="" className='d-inline-block m-auto' />
     </div>
   ),
   id: 'TopCellPlugin',
@@ -24,41 +18,12 @@ const myFirstcellPlugin = {
     type: 'autoform',
     schema: {
       properties: {
-        text: {
+        url: {
           type: "string",
-          default: "SAMPLE TEXT",
-        },
-        secText: {
-          type: "string",
-          default: "SAMPLE TEXT",
-        }
-        ,
-        color: {
-          type: "string",
-          default: "white",
-          uniforms: {
-            component: Inputs.ColorPickerField
-          },
-        }
-        ,
-        bgcolor: {
-          type: "string",
-          default: "white",
-          uniforms: {
-            component: Inputs.ColorPickerField
-          },
-
-        },
-        height: {
-          type: "number",
-          default: 26,
-        },
-        fontSize: {
-          type: "number",
-          default: 3,
+          default: "https://media.istockphoto.com/photos/wooden-chairs-at-table-in-bright-open-space-interior-with-lamp-next-picture-id968086564?k=6&m=968086564&s=612x612&w=0&h=akcSZ4mvydFK9xnXi45PSo4mXizwMGxb7j3O_A1qTEU="
         }
       },
-      required: ['text', 'secText'],
+      required: ['url'],
     },
   },
 };

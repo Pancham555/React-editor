@@ -13,7 +13,7 @@ import heroPlugin from "./components/Hero/heroPlugin";
 import heroPlugin2 from "./components/Hero/heroPlugin2";
 import cardPlugin from "./components/cardPlugin/cardPlugin1";
 
-const cellPlugins = [slate(), image, FooterPlugin,FooterPlugin2, headingPlugin, navPlugin, texBlockPlugin,cardPlugin, CarouselPlugin,featurePlugin,heroPlugin,heroPlugin2];
+const cellPlugins = [slate(), image, FooterPlugin, FooterPlugin2, headingPlugin, navPlugin, texBlockPlugin, cardPlugin, CarouselPlugin, featurePlugin, heroPlugin, heroPlugin2];
 
 
 export default function SimpleExample() {
