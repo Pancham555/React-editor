@@ -2,7 +2,7 @@
 
 const navPlugin = {
   Renderer: ({ data }) => (
-    <nav class="navbar navbar-expand-md navbar-dark  bg-dark">
+    <nav class="navbar navbar-expand-md navbar-light  bg-light shadow-sm">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">{data.title}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
