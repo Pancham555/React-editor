@@ -15,8 +15,9 @@ import cardPlugin from "./components/cardPlugin/cardPlugin1";
 import ApiPlugin from "./components/api/apiPlugin";
 import jumbotronPlugin from "./components/Jumbotron/jumbotronPlugin";
 import axios from "axios";
-
-const cellPlugins = [slate(), navPlugin, heroPlugin, heroPlugin2, jumbotronPlugin, FooterPlugin, FooterPlugin2, headingPlugin, image, texBlockPlugin, cardPlugin, CarouselPlugin, featurePlugin, ApiPlugin];
+import AlertPlugin from "./components/alert/alertPlugin";
+import AccordionPlugin from "./components/accordion/accordionPlugin";
+const cellPlugins = [slate(), navPlugin, heroPlugin, heroPlugin2, jumbotronPlugin, FooterPlugin, FooterPlugin2, headingPlugin, image, texBlockPlugin, cardPlugin, CarouselPlugin, featurePlugin, ApiPlugin, AlertPlugin, AccordionPlugin];
 
 
 
