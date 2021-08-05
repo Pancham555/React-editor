@@ -9,7 +9,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 const useStyles = makeStyles((theme) => ({
     root: {
         width: '99%',
-        display: "block"
+        display: "block",
+        margin: "auto"
     },
     heading: {
         fontSize: theme.typography.pxToRem(15),
